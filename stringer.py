@@ -16,4 +16,9 @@ class Stringer_Ctrl:
         if picked_var:
             return picked_format.format(*list(self.generate() for _ in range(picked_var)))
         else: return picked_format
-            
+    
+    def authenticate(self):
+        pass
+
+
+        

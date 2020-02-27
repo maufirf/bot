@@ -42,7 +42,7 @@ api = tweepy.API(auth)
 print('TWITTER API OBJECT CREATED',api,sep='\n')
 
 fb_response = graph.put_object(parent_object='me', connection_name='feed',
-                  message=stringer_ctrl.generate())
+                  message=generated)
 print('FACEBOOK RESPONSE: ',fb_response,sep='\n')
 
 twitter_response = api.update_status(generated)
