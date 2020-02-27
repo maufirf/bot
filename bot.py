@@ -3,6 +3,7 @@ import json
 import facebook
 import tweepy
 import stringer
+import datetime
 
 print('IMPORT FINISHED')
 
@@ -22,9 +23,14 @@ else:
     }
 print('TOKEN LOADED')
 
+with open('emojis.json','r',encoding='UTF-8') as emojis_file:
+    emojis = json.load(emojis_file)
+print('EMOJI SET LOADED:',emojis)
+
 stringer_ctrl = stringer.Stringer_Ctrl()
 print('STRINGER OBJECT INITIALIZED')
-generated = stringer_ctrl.generate()
+emoji_selected = emojis[datetime.datetime.now().hour]
+generated = stringer_ctrl.generate([emoji_selected+'{0}'+emoji_selected, 1])
 print(f'NEW TEXT GENERATED: {generated}')
 
 graph = facebook.GraphAPI(access_token=ENV['FB_ACC_TOKEN_PAINTMIN'])
