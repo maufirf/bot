@@ -1,6 +1,7 @@
 # Personally added
 NUKESITE_*
 auth.json
+tinkerer.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
