@@ -3,6 +3,10 @@ NUKESITE_*
 auth.json
 tinkerer.py
 .vscode/
+bottlemintools-ebd84942576a.json
+dump/
+temp/
+.env*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
