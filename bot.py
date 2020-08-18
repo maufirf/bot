@@ -4,6 +4,7 @@ import facebook
 import tweepy
 import stringer
 import datetime
+from censoring import censor
 
 print('IMPORT FINISHED')
 
@@ -32,6 +33,10 @@ print('STRINGER OBJECT INITIALIZED')
 emoji_selected = emojis[datetime.datetime.now().hour]
 generated = stringer_ctrl.generate([emoji_selected+'{0}'+emoji_selected, 1])
 print(f'NEW TEXT GENERATED: {generated}')
+
+# hard censoring
+generated = censor(generated)
+print(f'POST-CENSORING TEXT: {generated}')
 
 graph = facebook.GraphAPI(access_token=ENV['FB_ACC_TOKEN_PAINTMIN'])
 print('FACEBOOK GRAPH OBJECT CREATED',graph,sep='\n')
