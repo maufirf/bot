@@ -23,8 +23,8 @@
 
     ["me? {0}? no, i'm {1}.", 40, 2],
     ["The {0} Appreciation Society", 40, 1],
-    ["I {0}, therefore I {1}.", 40, 2]
+    ["I {0}, therefore I {1}.", 40, 2],
 
-    ["happy new {0}", 1000, 1]
+    ["happy new {0}", 1000, 1],
     ["year", 1000, 0]
 ]
